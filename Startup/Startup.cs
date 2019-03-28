@@ -1,3 +1,5 @@
+using CryptoPortfolio.Web.Api.Interfaces;
+using CryptoPortfolio.Web.Api.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -16,7 +18,7 @@ namespace CryptoPortfolio
         }
 
         public IConfiguration Configuration { get; }
-
+        
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -27,6 +29,11 @@ namespace CryptoPortfolio
             {
                 configuration.RootPath = "ClientApp/build";
             });
+
+            services.AddSingleton<IConfiguration>(Configuration);
+            services.AddSingleton<ICryptoPortfolioService, CryptoPortfolioService>();
+            
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

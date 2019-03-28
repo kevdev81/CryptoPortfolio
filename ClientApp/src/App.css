@@ -1,0 +1,114 @@
+html,
+body {
+  overflow: hidden;
+}
+
+/* NavBar */
+.navBarIcon {
+  height: 7em !important;
+  width: 8em !important;
+}
+.navBarDropdownItem {
+  border: solid black 1px;
+  border-radius: 10%;
+}
+
+/* App */
+/* .appContainer {
+  background-color: black;
+} */
+.appBody {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+}
+.appMainDisplay {
+  grid-column: 1 / 3;
+  grid-row: 1 / 4;
+  height: 100%;
+  width: 100%;
+}
+.appCoinProfile {
+  grid-column: 3;
+  grid-row: 1 / 4;
+  width: 100%;
+  height: 100%;
+}
+.appPriceWatch {
+  grid-column: 1 / 4;
+  grid-row: 4 / 8;
+  width: 100%;
+  height: 100%;
+  background-color: #212529;
+  border: solid black 2px;
+}
+
+/* Carousel */
+/* .carousel {
+  height: 70vh;
+  width: 66vw;
+  text-align: center;
+}
+.carouselItem {
+  height: 69.5vh;
+  padding: 2%;
+  width: 66vw;
+  object-fit: contain;
+}
+.carouselImg {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+} */
+
+/* Coin Profile */
+.coinProfile {
+  height: 70vh;
+  width: 34vw;
+  object-fit: fill;
+}
+
+/* Price Watch */
+.priceWatch {
+  height: 30vh;
+  width: 100v;
+  object-fit: contain;
+  padding: 0.5%;
+}
+.priceWatchItem {
+  margin-left: 10%;
+  margin-right: 3%;
+}
+
+.createPortfolioOption {
+  border: solid lightgray 1px;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5%;
+  background-color: rgb(230, 238, 238);
+}
+
+.newPortfolioForm {
+  padding: 1%;
+  text-align: center;
+}
+
+.navBarDropDown {
+  background-color: rgb(168, 150, 150);
+}
+.navLinkBtn {
+  color: white;
+  /* background-color: aquamarine !important; */
+}
+/* .dropdownToggle {
+  color: "white" !important;
+  padding: 2px;
+  size: "150%";
+} */
+
+.textWhite {
+  color: white;
+}
+.textBlue {
+  color: #17a2b8;
+}

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoPortfolio.Web.Api", "CryptoPortfolio.Web.Api.csproj", "{356F5BED-6BD6-4A49-99DB-E8D53081678C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{356F5BED-6BD6-4A49-99DB-E8D53081678C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{356F5BED-6BD6-4A49-99DB-E8D53081678C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{356F5BED-6BD6-4A49-99DB-E8D53081678C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{356F5BED-6BD6-4A49-99DB-E8D53081678C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B416935B-D683-4611-A061-4521AD2406FC}
+	EndGlobalSection
+EndGlobal
