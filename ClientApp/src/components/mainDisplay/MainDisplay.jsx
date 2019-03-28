@@ -1,7 +1,7 @@
 import React from "react";
 import Chart from "./Chart";
-import MarketCapDisplay from "./MarketCapDisplay";
-import { Button, Card, CardBody, CardHeader, Modal } from "reactstrap";
+import MarketCap from "./MarketCap";
+import { Button, Modal } from "reactstrap";
 import BlogAuth from "../blogs/BlogAuth";
 
 class MainDisplay extends React.Component {
@@ -38,34 +38,33 @@ class MainDisplay extends React.Component {
 
   render() {
     return (
-      <Card>
-        <CardHeader>
-          <Button outline color="info" onClick={this.showChart}>
-            Chart
-          </Button>{" "}
-          <Button outline color="info" onClick={this.showMarketCap}>
-            Market Cap
-          </Button>{" "}
-          <Button color="primary" onClick={this.showModal}>
-            Blogs
-          </Button>
-        </CardHeader>
-        <CardBody>
-          {this.state.showChart && (
+      <div style={{ objectFit: "contain" }}>
+        <div style={{ backgroundColor: "rgba(0, 0, 0, 0.03)" }}>
+          <h1 style={{ marginLeft: "12%" }}>
+            <Button outline color="info" onClick={this.showChart}>
+              Chart
+            </Button>{" "}
+            <Button outline color="info" onClick={this.showMarketCap}>
+              Market Cap
+            </Button>{" "}
+            <Button color="info" onClick={this.showModal}>
+              Blogs
+            </Button>
+          </h1>
+        </div>
+        <div className="widget">
+          {this.state.showChart ? (
             <div>
               <Chart />
             </div>
+          ) : (
+            <MarketCap />
           )}
-          {this.state.showMarketCap && (
-            <div>
-              <MarketCapDisplay />
-            </div>
-          )}
-        </CardBody>
+        </div>
         <Modal isOpen={this.state.showModal}>
           <BlogAuth />
         </Modal>
-      </Card>
+      </div>
     );
   }
 }

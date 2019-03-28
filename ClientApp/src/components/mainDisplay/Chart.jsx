@@ -9,7 +9,8 @@ class Chart extends React.Component {
           symbol="COINBASE:BTCUSD"
           theme={Themes.DARK}
           locale="en"
-          // autosize
+          height="468vh"
+          width="50vw"
         />
       </div>
     );

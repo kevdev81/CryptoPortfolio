@@ -1,4 +1,5 @@
 ﻿using CryptoPortfolio.Web.Api.Interfaces;
+using CryptoPortfolio.Web.Api.Models.CoinInfoScraper;
 using CryptoPortfolio.Web.Api.Models.CryptoPortfolio;
 using System;
 using System.Collections.Generic;

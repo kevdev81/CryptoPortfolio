@@ -31,6 +31,7 @@ namespace CryptoPortfolio
             });
 
             services.AddSingleton<IConfiguration>(Configuration);
+            services.AddSingleton<ICoinInfoScraperService, CoinInfoScraperService>();
             services.AddSingleton<ICryptoPortfolioService, CryptoPortfolioService>();
             
 

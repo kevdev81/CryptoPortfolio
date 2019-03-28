@@ -39,9 +39,15 @@ class ExistingPortfolio extends React.Component {
     this.setState({ isOpen: true });
   };
 
+  closePortfolio = () => {
+    this.setState({
+      portfolioData: []
+    });
+  };
+
   render() {
     return (
-      <CardBody>
+      <div>
         {!this.state.portfolioData.id && (
           <React.Fragment>
             <div align="right">
@@ -76,7 +82,7 @@ class ExistingPortfolio extends React.Component {
         )}
         {this.state.portfolioData.id && (
           <React.Fragment>
-            <CardHeader>Portfolio Data:</CardHeader>
+            <h1>Portfolio Data:</h1>
             <CardBody style={{ overflow: "auto !important" }}>
               <p>For portfolio code #{this.state.portfolioData.id}</p>
               Coin:
@@ -91,7 +97,10 @@ class ExistingPortfolio extends React.Component {
               <p>{this.state.portfolioData.dateCreated}</p>
             </CardBody>
             <div align="center">
-              <Button onClick={this.showModal}>Edit</Button>{" "}
+              <Button color="warning" onClick={this.showModal}>
+                Edit
+              </Button>{" "}
+              <Button onClick={this.closePortfolio}>Close</Button>{" "}
               <DeletePortfolio portfolioId={this.state.portfolioId} />
             </div>
             <Modal isOpen={this.state.isOpen}>
@@ -99,7 +108,7 @@ class ExistingPortfolio extends React.Component {
             </Modal>
           </React.Fragment>
         )}
-      </CardBody>
+      </div>
     );
   }
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardBody, CardHeader, Button, Modal } from "reactstrap";
+import { CardBody, Button, Modal } from "reactstrap";
 import NewPortfolio from "./NewPortfolio";
 import ExistingPortfolio from "./ExistingPortfolio";
 
@@ -20,7 +20,7 @@ class CoinProfile extends React.Component {
   };
   render() {
     return (
-      <Card className="coinProfile">
+      <div className="coinProfile">
         <CardBody>
           {!this.state.hasExistingPortfolio ? (
             <React.Fragment>
@@ -42,7 +42,7 @@ class CoinProfile extends React.Component {
             <ExistingPortfolio toggle={this.toggle} />
           )}
         </CardBody>
-      </Card>
+      </div>
     );
   }
 }

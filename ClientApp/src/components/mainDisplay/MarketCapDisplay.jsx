@@ -4,7 +4,7 @@ import MarketCap from "./MarketCap";
 class MarketCapDisplay extends React.Component {
   render() {
     return (
-      <div>
+      <div align="center">
         <MarketCap />
       </div>
     );
