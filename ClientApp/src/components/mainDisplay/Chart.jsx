@@ -1,10 +1,16 @@
 import React from "react";
+import TradingViewWidget, { Themes } from "react-tradingview-widget";
 
 class Chart extends React.Component {
   render() {
     return (
-      <div>
-        <h1>Chart</h1>
+      <div className="widget">
+        <TradingViewWidget
+          symbol="COINBASE:BTCUSD"
+          theme={Themes.DARK}
+          locale="en"
+          // autosize
+        />
       </div>
     );
   }

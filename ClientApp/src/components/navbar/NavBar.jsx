@@ -86,14 +86,14 @@ export default class Example extends React.Component {
                     src={icon.btcIcon}
                     alt=""
                   />
-                </DropdownItem>
+                </DropdownItem>{" "}
                 <DropdownItem>
                   <img
                     className="icon navBarIcon navBarDropdownItem"
                     src={icon.ethIcon}
                     alt=""
                   />
-                </DropdownItem>
+                </DropdownItem>{" "}
                 <DropdownItem>
                   <img
                     className="icon navBarIcon navBarDropdownItem"

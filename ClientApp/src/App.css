@@ -112,3 +112,9 @@ body {
 .textBlue {
   color: #17a2b8;
 }
+
+.widget {
+  border: solid black 2px;
+  border-radius: 10px;
+  background-color: #212529;
+}

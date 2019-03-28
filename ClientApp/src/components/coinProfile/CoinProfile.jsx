@@ -21,7 +21,6 @@ class CoinProfile extends React.Component {
   render() {
     return (
       <Card className="coinProfile">
-        <CardHeader>Portfolio</CardHeader>
         <CardBody>
           {!this.state.hasExistingPortfolio ? (
             <React.Fragment>

@@ -1,5 +1,5 @@
 import React from "react";
-import ChartDisplay from "./ChartDisplay";
+import Chart from "./Chart";
 import MarketCapDisplay from "./MarketCapDisplay";
 import { Button, Card, CardBody, CardHeader, Modal } from "reactstrap";
 import BlogAuth from "../blogs/BlogAuth";
@@ -7,16 +7,29 @@ import BlogAuth from "../blogs/BlogAuth";
 class MainDisplay extends React.Component {
   state = {
     showChart: true,
-    showNotes: false,
+    showMArketCap: false,
     showModal: false
   };
 
   toggleComponent = () => {
     this.setState(prevState => ({
       showChart: !prevState.showChart,
-      showNotes: !prevState.showNotes,
       showMarketCap: !prevState.showMarketCap
     }));
+  };
+
+  showChart = () => {
+    this.setState({
+      showChart: true,
+      showMarketCap: false
+    });
+  };
+
+  showMarketCap = () => {
+    this.setState({
+      showChart: false,
+      showMarketCap: true
+    });
   };
 
   showModal = () => {
@@ -27,21 +40,20 @@ class MainDisplay extends React.Component {
     return (
       <Card>
         <CardHeader>
-          <Button outline color="info" onClick={this.toggleComponent}>
+          <Button outline color="info" onClick={this.showChart}>
             Chart
           </Button>{" "}
-          <Button outline color="info" onClick={this.toggleComponent}>
+          <Button outline color="info" onClick={this.showMarketCap}>
             Market Cap
           </Button>{" "}
           <Button color="primary" onClick={this.showModal}>
             Blogs
           </Button>
         </CardHeader>
-        <hr />
         <CardBody>
           {this.state.showChart && (
             <div>
-              <ChartDisplay />
+              <Chart />
             </div>
           )}
           {this.state.showMarketCap && (
